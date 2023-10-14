@@ -1,10 +1,17 @@
-const container = document.querySelector('.container');
+document.addEventListener("DOMContentLoaded", function () {
+    createBoard(32);
+})
 
-function createGrid(size) {
-    for (i = 0; i < (size * size); i++) {
-        let cell = document.createElement('div');
-        container.appendChild(cell).className = "grid-item";
+function createBoard(size) {
+    let board = document.querySelector(".board");
+
+    board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+
+    let numDivs = size * size;
+    for (i =0; i < numDivs; i ++) {
+        let div = document.createElement("div");
+        div.style.backgroundColor = "yellow";
+        board.insertAdjacentElement("beforeend", div);
     }
 }
-
-createGrid (16);

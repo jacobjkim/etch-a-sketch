@@ -1,9 +1,11 @@
-* {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-
-header {
+.header {
    display: flex;
    justify-content: center;
    font-size: 28px;
@@ -11,17 +13,13 @@ header {
    margin-bottom: 50px;
 }
 
-.container {
+.board {
     display: grid;
-    grid-template-columns: repeat(16,auto);
-    justify-content: center;
+    width: 600px;
+    height: 600px;
+    border: 1px solid gray;
 }
 
 .grid-item {
-    display: flex;
-    padding: 1em;
-    width: 5px;
-    height: 5px;
-    border: 1px solid black;
-    margin: 0px;
+    border: 0.5px solid lightgray;
 }
